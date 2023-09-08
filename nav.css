@@ -1,72 +1,19 @@
-.nav-header{
+header{
     display: flex;
     justify-content: space-between;
-    padding: 0.3rem 1rem;
+    padding: 0rem 1rem;
+    align-items: center;
 }
-.menu{
-    cursor: pointer;
-    position: relative;
+.all-header{
+box-shadow: 1px 0px 3px black;
 }
-.nav-icon, .nav-icon::before, .nav-icon::after{
-    background-color: white;
+.icons{
+    display: flex;
+    gap: 20px;
+}
+.soc{
     width: 30px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    transition: all 0.5s;
-    right: 0;
-    box-shadow: 1px 2px 3px black;
-  }
-  .nav-icon::before, .nav-icon::after{
-      content: '';
-  }
-  .nav-icon::before {
-      transform: translate(0, -12px);
-    }
-    
-  .nav-icon::after {
-      transform: translate(0, 12px);
-   }
-   .list{
-    display: none;
 }
-.show{
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 0.5rem;
-    position: fixed;
-    z-index: 20;
-    width: 100%;
-    background-color: rgb(17, 16, 16);
-    box-shadow: 2px 2px 3px 1px black;
-}
-.show li a{
-    color: white;
-}
-.show li{
-    width: 70%;
-    margin: auto;
-    text-transform: capitalize;
-    font-size: 1.15rem;
-    padding: 0.2rem;
-    border: 2px solid transparent;
-    border-radius: .3rem;
-}
-.show li:hover, .listb li:hover{
-    transform: scale(1.05);
-    border: 1px solid white;
-}
-.nav-icon.active {
-    background-color: transparent;
-    transform: rotate(720deg)
-  }
-  .nav-icon.active::before {
-    transform: translateX(0) rotate(45deg);
-  }
-  
-  .nav-icon.active::after {
-    transform: translateX(0) rotate(-45deg);
-  }
-.logo{
-    width: 60px;
+.soc:hover{
+    fill: goldenrod;
 }

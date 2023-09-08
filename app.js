@@ -1,17 +1,5 @@
-const navToggle = document.querySelector(".menu");
-const links = document.querySelector(".list");
-
-navToggle.addEventListener("click", function () {
-  
-  links.classList.toggle("show");
-  var nav = document.querySelector(".nav-icon");
-  nav.classList.toggle("active");
-  var list = document.querySelector(".listb");
-list.classList.toggle("space");
-});
-
 var i = 0;
-var txt = "soft's drawings";
+var txt = "Welcome to Soft Art's page.";
 var speed = 50;
 function load() {
   if (i < txt.length) {

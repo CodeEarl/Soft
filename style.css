@@ -4,7 +4,20 @@
     box-sizing: border-box;
 }
 body{
-    padding: 1rem;
+    padding: 1.5rem 2rem;
+    background-image: url(/mbg.png);
+    background-size: 100% 120vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+}
+.banner{
+    text-align: center;
+}
+.cen{
+    text-align: center;
+    font-size: 2.5rem;
 }
 ul{
     list-style: none;
@@ -16,16 +29,15 @@ a{
 h1,h2,h3,h4,h5,h6,a,button{
     text-transform: capitalize;
 }
-.main{
-    display: grid;
-    gap: 1rem;
-}
 .text{
     margin: 1rem 0;
 }
 h1{
     font-size: 2rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+}
+.banner h1{
+    margin: 0;
 }
 .buttons{
     display: flex;
@@ -51,45 +63,81 @@ h1{
     color: black;
     border: 1px solid black;
 }
+.buttons .button:hover{
+    background-color: rgb(182, 137, 24);
+    color:rgb(253, 253, 253)
+}
 .gallery{
-    display: grid;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
+.column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 7px;
+}
+.splide__list{
+    height: 400px;
+}
+.column img {
+    margin-top: 12px;
+    vertical-align: middle;
+    width: 100%;
+    object-fit: cover;
+}
+.clohs, .home, .murals, .paint, .frames{
+    margin: 3rem 0 3rem 0;
+}
+div:not(.project), div:not(.column){
+    margin: 1rem 0;
+}
+.title,.banner h1{
+    font-family: 'Rubik Iso', cursive;
+}
+@media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+}
+@media screen and (max-width: 760px) {
 
-@media screen and (min-width: 500px){
-    .gallery{
-        grid-template-columns: auto auto;
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+    body {
+       padding: 1rem;
+    }
+    .column{
+        padding: 0 4px;
+    }
+    .column img {
+        margin-top: 8px;
     }
 }
-@media screen and (min-width: 700px){
-    .gallery{
-        grid-template-columns: auto auto auto;
-    }
-    .gallery img, .galleryy .column img{
-        width: 200px;
-        height: 200px;
-    }
-    .main{
-        grid-template-columns: 300px auto;
+@media screen and (min-width: 700px) {
+    .main {
+        display:flex;
+        gap: 40px;
+      }
+    .splide{
+        width: 900px;
     }
 }
-@media screen and (min-width: 1000px){
-    .gallery{
-        grid-template-columns: auto auto auto auto auto;
-    }
-    .gallery img, .galleryy .column img{
-        width: 180px;
-        height: 200px;
-    }
-    .main{
-        grid-template-columns: 500px auto;
-    }
-}
-@media screen and (min-width: 1100px){
-    .gallery{
-        grid-template-columns: auto auto auto auto auto;
-    }
-    .gallery img, .galleryy .column img{
-        width: 250px;
-        height: 250px;
+@media screen and (min-width: 700px) {
+    .main {
+        display:flex;
+        gap: 50px;
+      }
+    .splide{
+        width: 800px;
+        height: 450px;
     }
 }
